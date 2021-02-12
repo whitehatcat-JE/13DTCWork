@@ -15,22 +15,26 @@ public class Cat
 
     /**
      * Constructor for objects of class Cat
+     * Construct a new Cat object
+     * 
+     * @param col  a string for the colour of the cat's hair
+     * @param hairtype  a string for the type of hair the cat has
+     * @param years  an int giving the cats age in years
      */
-    public Cat()
+    public Cat(String col, String hairtype, int years)
     {
         // initialise instance variables
-        x = 0;
+        colour = col;
+        hair = hairtype;
+        age = years;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * prints "Woof!"
      */
-    public int sampleMethod(int y)
+    public void bark()
     {
         // put your code here
-        return x + y;
+        System.out.println("Wolf!");
     }
 }

@@ -1,8 +1,10 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Cat()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Cat\r\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=2
+comment0.target=Cat
+comment0.text=\r\n\ Cats\ have\ hair\ colour\ and\ type\r\n\ As\ defined\ here\ they\ can\ only\ bark\r\n\ \r\n\ @author\ Jayden\ Everest\ \r\n\ @version\ 11/02/21\r\n
+comment1.params=col\ hairtype\ years
+comment1.target=Cat(java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Cat\r\n\ Construct\ a\ new\ Cat\ object\r\n\ \r\n\ @param\ col\ \ a\ string\ for\ the\ colour\ of\ the\ cat's\ hair\r\n\ @param\ hairtype\ \ a\ string\ for\ the\ type\ of\ hair\ the\ cat\ has\r\n\ @param\ years\ \ an\ int\ giving\ the\ cats\ age\ in\ years\r\n
+comment2.params=
+comment2.target=void\ bark()
+comment2.text=\r\n\ prints\ "Woof\!"\r\n
+numComments=3

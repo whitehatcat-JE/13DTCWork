@@ -61,6 +61,21 @@ public class Cat
     }
     
     /**
+     * Returns colour
+     */
+    public String colour()
+    {
+        return this.colour;
+    }
+    
+    /**
+     * Returns hair type
+     */
+    public String getHair()
+    {
+        return this.hair;
+    }
+    /**
      * Create 2 dogs. Make them bark.
      */
     public static void main(String[] args)
@@ -73,6 +88,13 @@ public class Cat
         System.out.println(can.getAge());
         System.out.println(ape.catYears());
         System.out.println(can.catYears());
+        System.out.println(ape.colour());
+        System.out.println(can.colour());
+        System.out.println(ape.getHair());
+        System.out.println(can.getHair());
+        
+        Cat henry = new Cat("Grey", "Spikey", 7);
+        henry.bark();
         
     }
 }

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Car
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Car\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Creates\ a\ car\ and\ stores\ information\ on\ it\r\n\r\n\ @author\ Jayden\r\n\ @version\ 18/02/21\r\n
 comment1.params=col\ modelType\ brand\ buyer\ velocity
 comment1.target=Car(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ double)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Car\r\n
@@ -8,14 +8,13 @@ comment2.params=acceleration
 comment2.target=double\ accelerateVehicle(double)
 comment2.text=\r\n\ Accelerate\ Vehicle\r\n
 comment3.params=
-comment3.target=double\ brakeVehicle()
-comment3.text=\r\n\ Brake\ Vehicle\r\n
+comment3.target=void\ honk()
+comment3.text=\r\n\ Honk\ the\ horn\r\n
 comment4.params=
-comment4.target=void\ honk()
-comment4.text=\r\n\ Honk\ the\ horn\r\n
+comment4.target=double\ getSpeed()
+comment4.text=\r\n\ Return\ car\ speed\r\n
 comment5.params=
-comment5.target=double\ getSpeed()
-comment5.text=\r\n\ Return\ car\ speed\r\n
+comment5.target=java.lang.String\ getColour()
 comment6.params=args
 comment6.target=void\ main(java.lang.String[])
 numComments=7

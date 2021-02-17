@@ -36,14 +36,6 @@ public class Car
     }
     
     /**
-     * Brake Vehicle
-     */
-    public double brakeVehicle()
-    {
-        return 0;
-    }
-    
-    /**
      * Honk the horn
      */
     public void honk()
@@ -54,14 +46,22 @@ public class Car
     /**
      * Return car speed
      */
-    public double getSpeed(){
+    public double getSpeed()
+    {
         return this.speed;
+    }
+    
+    public String getColour()
+    {
+        return this.colour;
     }
     
     public static void main(String[] args)
     {
         Car tesla = new Car("Black", "Cybertruck", "Tesla", "Jayden", 10);
         tesla.honk();
+        System.out.println(tesla.getSpeed());
+        tesla.speed = tesla.accelerateVehicle(1.5);
         System.out.println(tesla.getSpeed());
     }
 }

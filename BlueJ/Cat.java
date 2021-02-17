@@ -37,4 +37,42 @@ public class Cat
         // put your code here
         System.out.println("Wolf!");
     }
+    
+    /**
+     * Returns age
+     */
+    public int getAge()
+    {
+        return age;
+    }
+    
+    /**
+     * returns age in cat years
+     */
+    public double catYears()
+    {
+        double catAge; //Declaring var
+        if (this.age <= 2) {
+            catAge = this.age * 10.5;
+        } else {
+            catAge = (this.age - 2) * 4 + 21;
+        }
+        return catAge;
+    }
+    
+    /**
+     * Create 2 dogs. Make them bark.
+     */
+    public static void main(String[] args)
+    {
+        Cat ape = new Cat("Brown", "Long", 4);
+        Cat can = new Cat("Fat", "Short", 14);
+        ape.bark();
+        can.bark();
+        System.out.println(ape.getAge());
+        System.out.println(can.getAge());
+        System.out.println(ape.catYears());
+        System.out.println(can.catYears());
+        
+    }
 }

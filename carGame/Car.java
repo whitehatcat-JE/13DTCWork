@@ -14,6 +14,7 @@ public class Car
         LEFT,
         RIGHT
     }
+    
     private int posX;
     private int posY;
     private Direction facing;

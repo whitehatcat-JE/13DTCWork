@@ -11,7 +11,7 @@ public class CountFlips
 {
     public static void main(String[] args)
     {
-        final int FLIPS = 100000;
+        final int FLIPS = 10000000;
         int heads = 0, tails = 0;
         
         coin myCoin = new coin();

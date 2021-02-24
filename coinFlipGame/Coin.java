@@ -19,6 +19,10 @@ public class Coin
         face = (int) (Math.random() * 2);
     }
     
+    /**
+     * Checks if the coin is heads
+     *      returns a boolean
+     */
         public boolean isHeads()
     {
         return (face == HEADS);

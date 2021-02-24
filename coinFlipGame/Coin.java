@@ -1,33 +1,26 @@
 
 /**
- * Write a description of class Coin here.
+ * Creates a coin able to flip
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jayden
+ * @version 25/02/21
  */
 public class Coin
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    //Instance variables
+    private final int HEADS = 0;
+    private int face;
+    
     /**
-     * Constructor for objects of class Coin
+     * Flips the coin
      */
-    public Coin()
+    public void flip()
     {
-        // initialise instance variables
-        x = 0;
+        face = (int) (Math.random() * 2);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+        public boolean isHeads()
     {
-        // put your code here
-        return x + y;
+        return (face == HEADS);
     }
 }

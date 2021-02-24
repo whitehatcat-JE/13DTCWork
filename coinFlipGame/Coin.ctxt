@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Coin
+comment0.text=\r\n\ Creates\ a\ coin\ able\ to\ flip\r\n\r\n\ @author\ Jayden\r\n\ @version\ 25/02/21\r\n
+comment1.params=
+comment1.target=void\ flip()
+comment1.text=\r\n\ Flips\ the\ coin\r\n
+comment2.params=
+comment2.target=boolean\ isHeads()
+numComments=3

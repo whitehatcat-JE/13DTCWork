@@ -1,4 +1,3 @@
-
 /**
  * Creates a coin able to flip
  *
@@ -8,7 +7,7 @@
 public class Coin
 {
     //Instance variables
-    private final int HEADS = 0;
+    private final int HEADS = 0; //Constants correct
     private int face;
     
     /**
@@ -21,9 +20,9 @@ public class Coin
     
     /**
      * Checks if the coin is heads
-     *      returns a boolean
+     * @return     returns a boolean
      */
-        public boolean isHeads()
+    public boolean isHeads()
     {
         return (face == HEADS);
     }

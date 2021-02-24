@@ -7,21 +7,14 @@
  */
 public class CoinGame
 {
-    //Constants
-    private static int winAmt = 3;
     /**
      * The main game loop
-     * @param running   Loops the script until a player wins
-     * @param p1Win     Stays false unless the player1 wins
-     * @param p2Win     Stays false unless player2 wins
-     * 
-     * @param p1Tails   How many times player1 has rolled tails
-     * @param p1Heads   How many times player1 has rolled heads
-     * @param p2Tails   How many times player2 has rolled tails
-     * @param p2Tails   How many times player2 has rolled heads
      */
     public static void main(String[] args)
     {
+        //Constants
+        final int WINAMT = 3;
+        
         //Game tracking variables
         boolean running = true;
         boolean p1Win = false;
@@ -54,12 +47,12 @@ public class CoinGame
             }
             
             //Checks if either player has won
-            if (p1Tails >= winAmt || p1Heads >= winAmt)
+            if (p1Tails >= WINAMT || p1Heads >= WINAMT)
             {
                 p1Win = true;
             }
             
-            if (p2Tails >= winAmt || p2Heads >= winAmt)
+            if (p2Tails >= WINAMT || p2Heads >= WINAMT)
             {
                 p2Win = true;
             }

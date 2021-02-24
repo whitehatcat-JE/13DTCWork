@@ -6,4 +6,5 @@ comment1.target=void\ flip()
 comment1.text=\r\n\ Flips\ the\ coin\r\n
 comment2.params=
 comment2.target=boolean\ isHeads()
+comment2.text=\r\n\ Checks\ if\ the\ coin\ is\ heads\r\n\ \ \ \ \ \ returns\ a\ boolean\r\n
 numComments=3

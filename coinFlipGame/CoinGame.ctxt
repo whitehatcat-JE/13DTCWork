@@ -3,5 +3,5 @@ comment0.target=CoinGame
 comment0.text=\r\n\ Coin\ Game\r\n\ Whoever\ gets\ three\ heads\ or\ tails\ first\ wins\r\n\r\n\ @author\ Jayden\r\n\ @version\ 23/02/21\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment1.text=\r\n\ The\ main\ game\ loop\r\n\ @param\ running\ \ \ Loops\ the\ script\ until\ a\ player\ wins\r\n\ @param\ p1Win\ \ \ \ \ Stays\ false\ unless\ the\ player1\ wins\r\n\ @param\ p2Win\ \ \ \ \ Stays\ false\ unless\ player2\ wins\r\n\ \r\n\ @param\ p1Tails\ \ \ How\ many\ times\ player1\ has\ rolled\ tails\r\n\ @param\ p1Heads\ \ \ How\ many\ times\ player1\ has\ rolled\ heads\r\n\ @param\ p2Tails\ \ \ How\ many\ times\ player2\ has\ rolled\ tails\r\n\ @param\ p2Tails\ \ \ How\ many\ times\ player2\ has\ rolled\ heads\r\n
+comment1.text=\r\n\ The\ main\ game\ loop\r\n
 numComments=2

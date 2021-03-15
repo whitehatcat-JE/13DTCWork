@@ -22,6 +22,11 @@ public class Lotto {
         int[] lineBalls = new int[LOTTOLENGTH];
         int[] resultBalls = new int[LOTTOLENGTH];
 
+        for (int z = 0; z < LOTTOLENGTH; z++) {
+            lineBalls[z] = lineArr[z];
+            resultBalls[z] = resultsArr[z];
+        }
+
         winAmt = 0; // Clears win count
 
         // Scans for any ball matches

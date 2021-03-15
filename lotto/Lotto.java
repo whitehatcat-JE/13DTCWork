@@ -40,6 +40,10 @@ public class Lotto {
     }
     
     /**
+     * 
+     */
+    
+    /**
      * Returns the lotto amount won
      * 
      * @return  Returns the winAmt

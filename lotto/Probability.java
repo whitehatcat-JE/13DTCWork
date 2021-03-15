@@ -2,10 +2,13 @@ public class Probability {
     static final int PLRLINES = 4;
     static final int LINELENGTH = 8;
     static final int STRIKEMAX = 4;
+    static final int LOTTOMAX = 6;
+    static final int LOTTOMIN = 3;
     static final double LINECOST = 0.7;
 
     static int[][] lines = new int[PLRLINES][LINELENGTH]; // 2D array
     static int[] strikeCounts = new int[STRIKEMAX]; // 0 being first strike etc
+    static int[] lottoCounts = new
 
     static double money = 0;
 
@@ -23,7 +26,7 @@ public class Probability {
 
         while (strikeCounts[STRIKEMAX-1] == 0){ // -1 as starts at 0
             roundCount++;
-            money -= LINECOST * LINELENGTH;
+            money -= LINECOST * (double) LINELENGTH;
             draw.generateDraw();
             int[] newResults = draw.getDraw();
             
@@ -38,7 +41,7 @@ public class Probability {
         }
 
         System.out.println("Completed in " + roundCount + " rounds");
-        System.out.println("Spent $" + (-money));
+        System.out.println("Spent $" + (Math.round(-money * 100.0)/100.0));
         
         for (int y = 0; y < STRIKEMAX; y++){
             System.out.println("Strike " + (y + 1) + ": " + strikeCounts[y] + " times");

@@ -1,4 +1,5 @@
 public class Probability {
+    // Constants
     static final int PLRLINES = 20;
     static final int LINELENGTH = 8;
     static final int STRIKEMAX = 4;
@@ -6,39 +7,50 @@ public class Probability {
     static final int LOTTOMIN = 3;
     static final double LINECOST = 0.7;
 
+    // Class instances
+    static Draw draw = new Draw();
+
+    // Arrays
     static int[][] lines = new int[PLRLINES][LINELENGTH]; // 2D array
     static int[] strikeCounts = new int[STRIKEMAX]; // 0 being first strike etc
     static int[] lottoCounts = new int[LOTTOCOUNT];
 
+    // Variables
     static double money = 0;
 
+    /**
+     * Runs the lotto scripts several times and calculates the probabilities
+     * @param args String
+     */
     public static void main(String[] args){
-        Draw draw = new Draw();
+        // Class instance setup
         Lotto lotto = new Lotto();
         Strike strike = new Strike();
 
-        for (int i = 0; i < PLRLINES; i++){
-            draw.generateDraw();
-            lines[i] = draw.getDraw();
-        }
+        // Sets the plr lines
+        generateRandomLines();
 
         int roundCount = 0;
 
+        // Probability calculation loop
         // while (strikeCounts[STRIKEMAX-1] == 0){ // -1 as starts at 0
         while (lottoCounts[LOTTOCOUNT - 1] == 0) {
+            // Resets/updates loop variables
             roundCount++;
             money -= LINECOST * (double) LINELENGTH;
-            draw.generateDraw();
-            int[] newResults = draw.getDraw();
+            int[] newResults = autoLine();
             
+            // Checks if any lines match the new results
             for (int x = 0; x < PLRLINES; x++) {
                 int[] line = lines[x];
-                
+
+                // Checks for strikes
                 strike.calcStrike(line, newResults);
                 if (strike.getStrike() != 0) {
                     strikeCounts[strike.getStrike()-1]++;
                 }
 
+                // Checks for lottery wins
                 lotto.calcLotto(line, newResults);
                 if (lotto.getLotto() >= LOTTOMIN) {
                     lottoCounts[lotto.getLotto() - LOTTOMIN]++;
@@ -62,5 +74,23 @@ public class Probability {
             System.out.println("Lotto " + (z + LOTTOMIN) + ": " + lottoCounts[z] + " times");
         }
 
+    }
+    
+    /**
+     * Automatically creates a line array
+     * @return int[] array of line
+     */
+    public static int[] autoLine() {
+        draw.generateDraw();
+        return draw.getDraw();
+    }
+
+    /**
+     * Randomly chooses the players lines
+     */
+    public static void generateRandomLines() {
+        for (int i = 0; i < PLRLINES; i++){
+            lines[i] = autoLine();
+        }
     }
 }

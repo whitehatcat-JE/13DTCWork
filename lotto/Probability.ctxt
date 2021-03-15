@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Probability
+comment0.text=\r\n\ Calculates\ the\ probabilty\ of\ different\ events\ in\ lotto\r\n\ \r\n\ @author\ Jayden\r\n\ @version\ 16/03/21\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Runs\ the\ lotto\ scripts\ several\ times\ and\ calculates\ the\ probabilities\r\n\ @param\ args\ String\r\n
+comment2.params=
+comment2.target=int[]\ autoLine()
+comment2.text=\r\n\ Automatically\ creates\ a\ line\ array\r\n\ @return\ int[]\ array\ of\ line\r\n
+comment3.params=
+comment3.target=void\ generateRandomLines()
+comment3.text=\r\n\ Randomly\ chooses\ the\ players\ lines\r\n
+numComments=4

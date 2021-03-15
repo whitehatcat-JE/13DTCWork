@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Draw
+comment0.text=\r\n\ Randomly\ chooses\ 6\ lotto\ balls,\ 1\ bonus\ and\ 1\ powerball\r\n\ \r\n\ @author\ Jayden\r\n\ @version\ 15/03/21\r\n
+comment1.params=
+comment1.target=void\ generateDraw()
+comment1.text=\r\n\ Generates\ a\ new\ draw,\ preventing\ repeating\ numbers\r\n
+comment2.params=
+comment2.target=int[]\ getDraw()
+comment2.text=\r\n\ Retrieves\ the\ currently\ cached\ drawResults\r\n\ \r\n\ @return\ \ Returns\ the\ drawResults\r\n
+numComments=3

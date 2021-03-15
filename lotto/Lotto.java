@@ -17,7 +17,7 @@ public class Lotto {
      * @param   lineArr Line chosen
      * @param   resultsArr Results selected
      */
-    public void calcLotto(int[] lineArr, int[] resultsArr){
+    public void calcLotto(int[] lineArr, int[] resultsArr) {
         // Seperates irrelevent balls from arrays
         int[] lineBalls = new int[LOTTOLENGTH];
         int[] resultBalls = new int[LOTTOLENGTH];
@@ -44,7 +44,7 @@ public class Lotto {
      * 
      * @return  Returns the winAmt
      */
-    public int getLotto(){
+    public int getLotto() {
         return winAmt;
     }
 }

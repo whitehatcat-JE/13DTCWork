@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Strike
+comment0.text=\r\n\ Calculates\ the\ strike\ count\ of\ a\ given\ draw\ and\ lotto\r\n\r\n\ @author\ Jayden\r\n\ @version\ 15/03/21\r\n
+comment1.params=lineArr\ resultsArr
+comment1.target=void\ calcStrike(int[],\ int[])
+comment1.text=\r\n\ Calculates\ the\ strike\ number\ and\ stores\ it\ as\ strikeCnt\r\n\ \r\n\ @param\ \ \ lineArr\ Line\ selected\ by\ the\ user\r\n\ @param\ \ \ resultsArr\ Lotto\ results\r\n
+comment2.params=
+comment2.target=int\ getStrike()
+comment2.text=\r\n\ Retrieves\ the\ strikeCnt\r\n\ \r\n\ @return\ \ Returns\ strikeCnt\r\n
+numComments=3

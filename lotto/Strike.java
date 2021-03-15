@@ -22,9 +22,10 @@ public class Strike
         strikeCnt = 0; // Clears the previous strike count
         
         for (int i = 0; i < MAXSTRIKE; i++) {
-            if (lineArr[i] == resultsArr[i]){
+            if (lineArr[i] == resultsArr[i]) {
                 strikeCnt++;
-            } else {
+            } 
+            else {
                 break;
             }
         }
@@ -35,7 +36,7 @@ public class Strike
      * 
      * @return  Returns strikeCnt
      */
-    public int getStrike(){
+    public int getStrike() {
         return strikeCnt;
     }
 }

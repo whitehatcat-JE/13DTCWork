@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Lotto
+comment0.text=\r\n\ Checks\ what\ the\ lotto\ result\ is\ of\ given\ line\ and\ result\r\n\ \r\n\ @author\ Jayden\r\n\ @version\ 15/03/21\r\n
+comment1.params=lineArr\ resultsArr
+comment1.target=void\ calcLotto(int[],\ int[])
+comment1.text=\r\n\ Calculates\ the\ lotto\ amount\ won\r\n\ \r\n\ @param\ \ \ lineArr\ Line\ chosen\r\n\ @param\ \ \ resultsArr\ Results\ selected\r\n
+comment2.params=
+comment2.target=int\ getLotto()
+comment2.text=\r\n\ Returns\ the\ lotto\ amount\ won\r\n\ \r\n\ @return\ \ Returns\ the\ winAmt\r\n
+numComments=3

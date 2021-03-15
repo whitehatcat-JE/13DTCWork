@@ -11,21 +11,21 @@ public class Draw {
     private final int POWERBALLSIDES = 10;
 
     // Variables
-    private int[] drawResults = new int[BALLCOUNT + 1]; // Extra one for powerball
+    private int[] drawResults = new int[BALLCOUNT + 1]; // Extra 1 for powerball
     
     /**
      * Generates a new draw, preventing repeating numbers
      */
-    public void generateDraw(){
+    public void generateDraw() {
         int[] newDraw = new int[BALLCOUNT + 1]; // Creates fresh draw
         
         // Rolls initial 7 balls without repeating numbers
-        for (int i = 0; i < BALLCOUNT; i++){
+        for (int i = 0; i < BALLCOUNT; i++) {
             int newBall = 0;
             boolean alreadyDrawn = true;
 
             // Checks if ball has already been rolled
-            while (alreadyDrawn){
+            while (alreadyDrawn) {
                 alreadyDrawn = false;
                 newBall = (int) (Math.random() * BALLSIDES);
                 for (int x = 0; x < BALLCOUNT; x++) {
@@ -51,7 +51,7 @@ public class Draw {
      * 
      * @return  Returns the drawResults
      */
-    public int[] getDraw(){
+    public int[] getDraw() {
         return drawResults;
     }
 }

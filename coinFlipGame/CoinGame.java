@@ -72,6 +72,7 @@ public class CoinGame
             {
                 System.out.println("Player 2 Wins!");
                 running = false;
+                System.out.println("Player 1 Loses!");
             }
         }
     }

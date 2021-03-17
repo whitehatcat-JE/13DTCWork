@@ -11,7 +11,6 @@ public class Probability {
     static final int STRIKEMAX = 4;
     static final int LOTTOCOUNT = 4;
     static final int LOTTOMIN = 3;
-    static final double 
     static final double LINECOST = 0.7;
 
     // Class instances

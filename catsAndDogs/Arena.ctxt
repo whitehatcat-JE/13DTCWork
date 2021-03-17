@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Arena
+comment0.text=\r\n\ Where\ the\ cats\ and\ dogs\ fight\ to\ the\ death\r\n\ \r\n\ @author\ Jayden\r\n\ @version\ 18/03/21\r\n
+comment1.params=
+comment1.target=Arena()
+comment1.text=\r\n\ Constructor\ \r\n
+comment2.params=
+comment2.target=void\ fillArena()
+comment2.text=\r\n\ Fills\ objects\ with\ cats\ and\ dogs\r\n\ Barks\ and\ meows\r\n
+comment3.params=dog\ cat
+comment3.target=void\ dogAttack(Dog,\ Cat)
+comment4.params=dog\ cat
+comment4.target=void\ catAttack(Dog,\ Cat)
+comment5.params=
+comment5.target=void\ fight()
+comment6.params=
+comment6.target=int\ checkWinner()
+comment6.text=\r\n\ Checks\ if\ all\ the\ cats\ or\ dogs\ are\ dead\r\n\ \r\n\ @return\ int\ \ 0\ if\ cats\ are\ all\ dead,\ 1\ if\ dogs\ are\ dead,\ -1\ if\ glitched\r\n
+numComments=7

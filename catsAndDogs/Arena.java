@@ -68,11 +68,8 @@ public class Arena {
                 catAttack(dogs[doomedDog], cats[chosenCat]);
             }
 
-            int bulliedCat = (int) (Math.random() * MAXCATS);
-            int violentDog = (int) (Math.random() * MAXDOGS);
-
-            if (dogs[violentDog].isAlive() && cats[bulliedCat].isAlive()) {
-                dogAttack(dogs[violentDog], cats[bulliedCat]);
+            if (dogs[doomedDog].isAlive() && cats[chosenCat].isAlive()) {
+                dogAttack(dogs[doomedDog], cats[chosenCat]);
             }
         } while (checkWinner() == -1);
         
@@ -86,7 +83,7 @@ public class Arena {
     /**
      * Checks if all the cats or dogs are dead
      * 
-     * @return int  0 if cats are all dead, 1 if dogs are dead, -1 if glitched
+     * @return int  0 if cats are all dead, 1 if dogs are dead, -1 if neither
      */
     public int checkWinner() {
         int catsAlive = MAXCATS, dogsAlive = MAXDOGS;

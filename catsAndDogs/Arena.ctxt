@@ -15,5 +15,5 @@ comment5.params=
 comment5.target=void\ fight()
 comment6.params=
 comment6.target=int\ checkWinner()
-comment6.text=\r\n\ Checks\ if\ all\ the\ cats\ or\ dogs\ are\ dead\r\n\ \r\n\ @return\ int\ \ 0\ if\ cats\ are\ all\ dead,\ 1\ if\ dogs\ are\ dead,\ -1\ if\ glitched\r\n
+comment6.text=\r\n\ Checks\ if\ all\ the\ cats\ or\ dogs\ are\ dead\r\n\ \r\n\ @return\ int\ \ 0\ if\ cats\ are\ all\ dead,\ 1\ if\ dogs\ are\ dead,\ -1\ if\ neither\r\n
 numComments=7

@@ -4,14 +4,18 @@
  * @author Jayden & co
  * @version 25/03/21
  */
+import java.util.ArrayList;
 
  public class gameInstance {
+    // Constants
+    final int COMBATANTS = 2;
+
     // Variables
     int[] plrBoardLayout;
     int[] enemyBoardLayout;
 
-    int[] plrCards;
-    int[] enemyCards;
+    var[] plrCards;
+    var[] enemyCards;
 
     // Tracking variables
     int rounds = 0;
@@ -24,14 +28,31 @@
         plrBoardLayout = plrLayout;
         enemyBoardLayout = enemyLayout;
     }
-    
+
+    /**
+     * Creates cards for each instance
+     */
+    public void generateNewCards() {
+        for (int pCard : plrBoardLayout) {
+            var newCard = new pool[pCard];
+        }
+    }
+    SCREAMING EAGLES!!!!!!!!!!!!!!!! :)
     /**
      * Runs the game and gets the win results
      * 
      * @return  Returns the game result
      */
-    public int[] runGame() {
-        
+    public int[] runGame(int[] results) {
+        rounds = 0; // Clears preround counter
+        winResult = 0; // Clears pre winResult
+
+        boolean plrStarts = ((int) (Math.random() * COMBATANTS) == 0);
+
+        while  (winResult == 0) {
+            
+        }
+
     }
     
  }

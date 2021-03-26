@@ -6,17 +6,21 @@
  * @version 25/03/21 
  */
 
+import java.util.ArrayList;
 public class MasterCard {
     final int MAXHEALTH, MAXATTACK;
+    final int MINHEALTH = 1;
     private boolean windFury = true;
-    private boolean battleCry = true;
-    private boolean deathRattle = true;
+
     private boolean reborn = true;
-    private boolean summoner = true;
+
     private boolean divineShield = true;
+    private boolean taunt = true;
+
     int curHealth;
     int curAttack;
-    int attackAmt;
+
+    var[] summoning = new var[];
 
     /**
      * Constructor of the template
@@ -24,7 +28,7 @@ public class MasterCard {
      * @param setHealth     int the amount of health the card should have
      * @param setAttack     int the amount of attack the card should have
      */
-    public masterCard(int setHealth, int setAttack, int setAttackAmt) {
+    public masterCard(int setHealth, int setAttack) {
         // Setup health and attack
         curAttack = setAttack;
         curHealth = setHealth;
@@ -82,25 +86,13 @@ public class MasterCard {
         curAttack -= deBuffAmt;
     }
     
-    /**
-     * @return battlecry
-     */
-    public boolean hasBattleCry() {
-        return battleCry;
-    }
 
-    /**
-     * @return deathrattle
-     */
-    public boolean hasDeathRattle() {
-        return deathRattle;        
-    }
 
     /**
      * @return windfury
      */
-    private boolean hasWindFury() {
-        return windFury;
+    public void setWindFury() {
+        windFury = true;
     }
 
     /**
@@ -109,28 +101,35 @@ public class MasterCard {
     public boolean hasReborn() {
         return reborn;
     }
-
-    /**
-     * @return summoner
-     */
-    public boolean canSummon() {
-        return summon;
+    public void revive() {
+        curHealth = MINHEALTH;
+        reborn = true;
     }
-    
-    /**
-     * @return divineshield
-     */
-    private boolean hasDivineShield() {
-        return divineshield;
+
+    public void setDivineShield() {
+        divineShield = true;
     }
 
     public void attackCard(MasterCard enemyCard) {
-        int attacks = this.getAttackAmt();
-        if (this.hasWindFury())
+        int attacks = 1;
+        if (windFury())
             attacks++;
         for (int a = 0; a < attacks; a++) {
-            enemyCard.TakeDamage(this.getAttack());
+            enemyCard.takeDamage(curAttack);
         }
+    }
+
+    /**
+     * This will recieve an int of damage and if divine shield is
+     * activated it will ignore the damage and turn it off.
+     * 
+     * @param damage    int the amount of damage the card should take
+     */
+    public void takeDamage(int damage) {
+        if (this.hasDivineShield())
+            this.divineShield = false;
+        else
+            curHealth -= damage;
     }
 }
 

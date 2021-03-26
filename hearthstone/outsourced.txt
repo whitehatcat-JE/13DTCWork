@@ -1,0 +1,32 @@
+  
+  MasterCard
+    private boolean summoner = true;
+    private boolean battleCry = true;
+    private boolean deathRattle = true;
+    /**
+     * @return battlecry
+     */
+    public boolean hasBattleCry() {
+        return battleCry;
+    }
+
+    /**
+     * @return deathrattle
+     */
+    public boolean hasDeathRattle() {
+        return deathRattle;        
+    }
+
+    /**
+     * @return summoner
+     */
+    public boolean canSummon() {
+        return summoner;
+    }
+
+gameInstance
+
+
+
+
+Simulation

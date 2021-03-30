@@ -21,10 +21,12 @@ public class Card {
 
     /**
      * Constructor for the individual Card class
+     * 
      * @param startHealth
      * @param startAttack
      */
-    public Card(String name, int startHealth, int startAttack, boolean attackTwice, boolean taunting, boolean hasDivineShield) {
+    public Card(String name, int startHealth, int startAttack, boolean attackTwice, boolean taunting,
+            boolean hasDivineShield) {
         // Makes initial variables accessible
         initialHealth = startHealth;
         initialAttack = startAttack;
@@ -32,13 +34,14 @@ public class Card {
         taunt = taunting;
         divineShield = hasDivineShield;
         cardName = name;
-        
+
         health = initialHealth;
         attack = initialAttack;
     }
 
     /**
      * Returns the attack strength
+     * 
      * @return
      */
     public int getAttack() {
@@ -47,6 +50,7 @@ public class Card {
 
     /**
      * Returns current health
+     * 
      * @return
      */
     public int getHealth() {
@@ -55,14 +59,20 @@ public class Card {
 
     /**
      * Damages the card
+     * 
      * @param damage
      */
     public void harm(int damage) {
-        health -= damage;
+        if (divineShield) {
+            useDivineShield();
+        } else {
+            health -= damage;
+        }
     }
 
     /**
      * Checks if card is dead
+     * 
      * @return
      */
     public boolean isDead() {
@@ -75,6 +85,7 @@ public class Card {
 
     /**
      * Says if should attack twice
+     * 
      * @return
      */
     public boolean hasWindFury() {
@@ -83,6 +94,7 @@ public class Card {
 
     /**
      * Checks if taunting
+     * 
      * @return
      */
     public boolean hasTaunt() {
@@ -95,20 +107,21 @@ public class Card {
     public boolean hasDivineShield() {
         return divineShield;
     }
-    
+
     /**
      * Uses divineShield
      */
-    public void useDivineShield() {
+    private void useDivineShield() {
         divineShield = false;
     }
-    
+
     /**
-     * Gets card's name
+     * Gets cards name
+     * 
      * @return
      */
     public String getName() {
         return cardName;
     }
-    
+
 }

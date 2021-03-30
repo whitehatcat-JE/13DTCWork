@@ -106,8 +106,6 @@ public class GameExecuter {
             // Selects hand2 attacker
             do { // Loops until a card unused this loop is chosen
                 AttackerIndex = (int) (Math.random() * hand2.size());
-                System.out.println(hand2CardsUsed.size());
-                System.out.println(hand2.size());
             } while (hand2CardsUsed.contains(AttackerIndex));
             // Records card index so it's not chosen again
             hand2CardsUsed.add(AttackerIndex);

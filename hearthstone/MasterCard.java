@@ -19,7 +19,6 @@ public class MasterCard {
 
     int curHealth;
     int curAttack;
-
     var[] summoning = new var[];
 
     /**

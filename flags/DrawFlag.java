@@ -5,13 +5,13 @@ import java.awt.Color;
 
 
 /**
- * Will draw a GUI Lollipop
+ * Will draw a GUI flag
  * @author Jayden
  * @version 1/04/21
  */
 public class DrawFlag{
-    private final float WIDTH = 600;
-    private final float HEIGHT = 300;
+    private final static float WIDTH = 600;
+    private final static float HEIGHT = 300;
     /**
      * Constructor for objects of class DrawFlag
      */
@@ -21,38 +21,38 @@ public class DrawFlag{
     }
 
     /**
-     * Draw a red v on a stick
+     * Draws a horizontal flag with given colours
      */
-    private void drawHorizontalFlag(ArrayList<Color> colors) {
-        double lineHeight = HEIGHT / colors.size();
-        for (int i = 0; i < colors.size(); i++) {}
-        /* Drawing our stick */
-        // set line width to 10
-        UI.setColor(STICKCOLOR);
-        UI.setLineWidth(size/ THICKNESS);
-        // Draw line (300, 200) to (300, 400)
-        UI.drawLine(x, y, x, bottom);
-        /* Draw our lollipop */
-        // Set line width to 1
-        UI.setLineWidth(1);
-        UI.setColor(LOLLIPOPCOLOR);
-        UI.fillOval(left, top, size, size);
+    private static void drawHorizontalFlag(ArrayList<Color> colors) {
+        double lineHeight = HEIGHT / colors.size(); // Determines vertical spacing
+        for (int i = 0; i < colors.size(); i++) { // Draws each color
+            UI.setColor(colors.get(i));
+            UI.fillRect(0, i * lineHeight, WIDTH, lineHeight);
+        }
     }
 
     /**
-     * Draw a lollipop and ask the user for its size
+     * Draws a vertical flag with given colors
      */
-    public void doDrawLollipop() {
-        double diam = UI.askDouble("Diameter: ");
-        this.drawLollipop(300, 180, diam, 200);
+    private static void drawVerticalFlag(ArrayList<Color> colors) {
+        double lineWidth = WIDTH / colors.size(); // Determines horizontal spacing
+        for (int i = 0; i < colors.size(); i++) { // Draws each color
+            UI.setColor(colors.get(i));
+            UI.fillRect(i * lineWidth, 0, lineWidth, HEIGHT);
+        }
     }
 
     /**
-     * Executes the lollipop script
+     * Sets colors and draws flag
      */
     public static void main(String[] args){
-        lollipop obj = new lollipop();
-        obj.doDrawLollipop();
+        ArrayList<Color> flagDesign = new ArrayList<Color>();
+        // Adds colors
+        flagDesign.add(Color.BLACK);
+        flagDesign.add(Color.RED);
+        flagDesign.add(Color.YELLOW);
+        // Draws flag
+        drawHorizontalFlag(flagDesign);
     }
 
 }

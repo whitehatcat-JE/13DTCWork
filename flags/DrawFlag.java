@@ -166,5 +166,46 @@ public class DrawFlag{
         drawHorizontalFlag(flagDesign);
     }
 
+    /**
+     * Draws Indonesia
+     */
+    public void indonesia(){
+        ArrayList<Color> flagDesign = new ArrayList<Color>();
+        // Adds colors
+        flagDesign.add(new Color(237,28,36));
+        flagDesign.add(Color.WHITE);
+        // Draws flag
+        drawHorizontalFlag(flagDesign);
+    }
+
+    /**
+     * Draws Latvia
+     */
+    public void latvia(){
+        ArrayList<Color> flagDesign = new ArrayList<Color>();
+        // Adds colors
+        flagDesign.add(new Color(158,6,33));
+        flagDesign.add(new Color(158,6,33));
+        flagDesign.add(Color.WHITE);
+        flagDesign.add(new Color(158,6,33));
+        flagDesign.add(new Color(158,6,33));
+        // Draws flag
+        drawHorizontalFlag(flagDesign);
+    }
+
+    /**
+     * Draws Mauritius
+     */
+    public void mauritius(){
+        ArrayList<Color> flagDesign = new ArrayList<Color>();
+        // Adds colors
+        flagDesign.add(new Color(237,27,36));
+        flagDesign.add(new Color(0,101,179));
+        flagDesign.add(new Color(254,242,0));
+        flagDesign.add(new Color(0,166,80));
+        // Draws flag
+        drawHorizontalFlag(flagDesign);
+    }
+
 }
 

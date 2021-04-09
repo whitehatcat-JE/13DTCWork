@@ -22,6 +22,12 @@ public class DrawFlag{
         hungary();
     }
 
+    public static void main(String[] args) {
+        DrawFlag flags = new DrawFlag();
+        
+        
+    }
+
     /**
      * Draws a horizontal flag with given colours
      */

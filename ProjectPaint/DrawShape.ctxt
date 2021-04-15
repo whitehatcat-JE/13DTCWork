@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=DrawShape
+comment0.text=\r\n\ Draws\ shapes\r\n\ @author\ Jayden\r\n\ @version\ 15/04/2021\r\n
+comment1.params=
+comment1.target=DrawShape()
+comment2.params=action\ x\ y
+comment2.target=void\ doMouse(java.lang.String,\ double,\ double)
+comment3.params=
+comment3.target=void\ changeColor()
+comment3.text=\r\n\ Make\ a\ random\ button\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ Main\ routine\r\n
+numComments=5

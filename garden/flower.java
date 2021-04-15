@@ -10,13 +10,13 @@ import java.awt.Color;
  * @version 9/04/2021
  */
 
- public class flower {
+ public class Flower {
     // instance Variables
     private double flowerX = -100; // x pos of flower
     private double flowerY = -100; // y pos of flower
 
     private int flowerSize; // size of flower
-    private int flowerHeight // height of flower
+    private int flowerHeight; // height of flower
 
     private double left; // left of flower
     private double right; // right of flower
@@ -28,7 +28,7 @@ import java.awt.Color;
     /**
      * Constructor for objects of class flower
      */
-    public flower(double x, double y, int size, int stem, Color col) {
+    public Flower(double x, double y, int size, int stem, Color col) {
         flowerX = x;
         flowerY = y;
         flowerSize = size;
@@ -51,14 +51,14 @@ import java.awt.Color;
     /**
      * Set top
      */
-    public setTop() {
+    public void setTop() {
         top = flowerY - flowerSize/2.0;
     }
 
     /**
      * Set bottom
      */
-    public setBottom() {
+    public void setBottom() {
         bottom = flowerY + flowerHeight;
     }
 
@@ -96,6 +96,6 @@ import java.awt.Color;
         // set the new position
         setTop();
         setLeft();
-        setDraw();
+        draw();
     }
  }

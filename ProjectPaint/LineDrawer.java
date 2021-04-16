@@ -14,7 +14,8 @@ import javax.swing.JColorChooser;
     // Fields
     private double startX, startY; // fields to remember the "pressed" pos
     private Color currentColor = Color.BLACK; // Current color
-    private int lineSize = 10;
+    private double lineSize = 10;
+    private String tool = "circle";
 
     /**
      * Constructor for objects in class LineDrawer
@@ -32,41 +33,59 @@ import javax.swing.JColorChooser;
         UI.setColor(currentColor);
     }
 
-    /**
-     * Increases line size
-     */
-    public void increaseLineSize() {
-        lineSize++;
-        UI.setLineWidth(lineSize); 
-    }
-
-    /**
-     * Decrease line size
-     */
-    public void decreaseLineSize() {
-        if (lineSize > 0) {
-            lineSize--;
-        }
-        UI.setLineWidth(lineSize); 
+    public void changeLineSize(double size) {
+        lineSize = size; 
+        UI.setLineWidth(lineSize);
     }
 
     /**
      * Clear canvas
      */
     public void doClear() {
-        UI.eraseRect(0, 0, 1000, 1000);
+        UI.eraseRect(0, 0, 10000, 10000);
     }
-
+    
     /**
      * Mouse actioner
      */
     public void doMouse(String action, double x, double y) {
-        if (action.equals("pressed")) {
-            startX = x;
-            startY = y;
-        } else if (action.equals("released")) {
-            UI.drawLine(startX, startY, x, y);
+        if (tool == "line") {
+            if (action.equals("pressed")) {
+                startX = x;
+                startY = y;
+            } else if (action.equals("released")) {
+                UI.drawLine(startX, startY, x, y);
+            }
+        } else {
+            if (action.equals("dragged") || action.equals("pressed")) {
+                if (tool == "square") {
+                    UI.fillRect(x - lineSize/2, y - lineSize/2, lineSize, lineSize);
+                } else if (tool == "circle") {
+                    UI.fillOval(x - lineSize/2, y - lineSize/2, lineSize, lineSize);
+                } 
+            }
         }
+    }
+
+    /**
+     * Sets tool to circle
+     */
+    public void setCircle(){
+        tool = "circle";
+    }
+
+    /**
+     * Sets tool to square
+     */
+    public void setSquare(){
+        tool = "square";
+    }
+
+    /**
+     * Sets tool to line
+     */
+    public void setLine(){
+        tool = "line";
     }
 
     /**
@@ -74,12 +93,17 @@ import javax.swing.JColorChooser;
      */
     public static void main(String[] args) {
         LineDrawer obj = new LineDrawer();
-        UI.setLineWidth(10); 
+        UI.setLineWidth(50); 
         UI.setMouseListener(obj::doMouse);
+        UI.setMouseMotionListener(obj::doMouse);
+
+        UI.addButton("Tool: Circle", obj::setCircle);
+        UI.addButton("Tool: Square", obj::setSquare);
+        UI.addButton("Tool: Line", obj::setLine);
+
         UI.addButton("Color", obj::doChooseColor);
-        UI.addButton("Increase", obj::increaseLineSize);
-        UI.addButton("Decrease", obj::decreaseLineSize);
         UI.addButton("Reset", obj::doClear);
+        UI.addSlider("Thickness", 0, 101, obj::changeLineSize);
     }
 
  }

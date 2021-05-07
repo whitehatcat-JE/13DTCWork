@@ -7,18 +7,19 @@
  * @version 6/05/2021
  */
 import ecs100.*;
+import java.lang.Math;
 public class Aerodynamics {
     // Constants
-    private final float STARTINGWINDSPEED = 1;
-    private final float STARTINGRAISESPEED = 1;
-    private final float FLAGX = 100;
-    private final float FLAGY = 100;
-    private final float MAXFLAGY = 250;
-    private final float MINFLAGY = 50;
+    private final double STARTINGWINDSPEED = 1;
+    private final double STARTINGRAISESPEED = 1;
+    private final double FLAGX = 100;
+    private final double FLAGY = 100;
+    private final double MAXFLAGY = 250;
+    private final double MINFLAGY = 50;
 
     // Variables
-    private float windSpeed;
-    private float raiseSpeed;
+    private double windSpeed;
+    private double raiseSpeed;
 
     // Methods
     /**
@@ -33,7 +34,15 @@ public class Aerodynamics {
      * Main routine for creating the GUI
      */
     public static void main(String[] args) {
-        
+        Flag flag = new Flag();
+        Enviroment enviro = new Enviroment();
+        enviro.drawEnviroment();
+        double counter = 0;
+        flag.drawFlag(100.0, 100.0 + Math.sin(counter/10)*10.0);
+        while (true){
+            UI.sleep(500);
+            flag.sway();
+        }
     }
 
  } 

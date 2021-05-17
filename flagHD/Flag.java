@@ -83,4 +83,13 @@ public class Flag {
         UI.eraseRect(flagX, flagY-RISEAMT, FLAGWIDTH, FLAGHEIGHT+RISEAMT*2);
     }
 
+    /**
+     * Adjusts the height of the flag
+     * @param y    Amount to adjust flagY by
+     */
+    public void changeHeight(double y) {
+        clearFlag();
+        flagY = y;
+    }
+
 }

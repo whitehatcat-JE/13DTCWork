@@ -10,22 +10,22 @@ import ecs100.*;
 import java.lang.Math;
 public class Aerodynamics {
     // Constants
-    private final double STARTINGWINDSPEED = 1;
-    private final double STARTINGRAISESPEED = 1;
-    private final double STARTINGFLAGX = 100;
-    private final double FLAGY = 100;
-    private final double MAXFLAGY = 250;
-    private final double MINFLAGY = 50;
-    private final double MAXSPEED = 100;
-    private final double MAXAMT = 300;
-    private final double MAXY = 1000;
-    private final double MINY = 0;
+    private final double STARTINGWINDSPEED = 1.0;
+    private final double STARTINGRAISESPEED = 50.0;
+    private final double STARTINGFLAGX = 100.0;
+    private final double FLAGY = 100.0;
+    private final double MAXFLAGY = 245.0;
+    private final double MINFLAGY = 50.0;
+    private final double MAXAMT = 300.0;
+    
+    private final double MAXDISTANCE = 100.0;
 
 
     // Variables
     private double windSpeed;
     private double raiseSpeed;
-    private double 
+    private double flagOffset = 0.0;
+    private double distance = STARTINGRAISESPEED;
 
     // Methods
     /**
@@ -40,28 +40,27 @@ public class Aerodynamics {
      * Increases the flag height
      */
     public void raiseFlag() {
-
+        flagOffset -= distance;
+        if (flagOffset < 0.0) {
+            flagOffset = 0.0;
+        }
     }
 
     /**
      * Decreases the flag height
      */
     public void lowerFlag() {
-
+        flagOffset += distance;
+        if (flagOffset > MAXFLAGY) {
+            flagOffset = MAXFLAGY;
+        }
     }
 
     /**
      * Changes the raise amt
      */
     public void raiseAmt(double amt) {
-
-    }
-
-    /**
-     * Changes the raise speed
-     */
-    public void raiseSpeed(double amt) {
-
+        distance = amt;
     }
 
     /**
@@ -74,13 +73,12 @@ public class Aerodynamics {
         
         UI.addButton("Up", aero::raiseFlag);
         UI.addButton("Down", aero::lowerFlag);
-        UI.addSlider("Distance", 0, MAXDISTANCE, aero::raiseAmt);
-        UI.addSlider("Speed", 0, MAXSPEED, aero::raiseSpeed);
+        UI.addSlider("Distance", 0, aero.MAXDISTANCE, aero::raiseAmt);
         enviro.drawEnviroment();
-        double counter = 0;
-        flag.drawFlag(100.0, 100.0 + Math.sin(counter/10)*10.0);
+        flag.drawFlag(100.0, 100.0);
         while (true){
             UI.sleep(500);
+            flag.changeHeight(aero.FLAGY + aero.flagOffset);
             flag.sway();
         }
     }

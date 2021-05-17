@@ -12,7 +12,10 @@ public class PuppetMaster {
     private CartoonCharacter cc1 = new CartoonCharacter(200, 100, "casey");
     private CartoonCharacter cc2 = new CartoonCharacter(500, 100, "alice");
     private CartoonCharacter cc3 = new CartoonCharacter(800, 100, "bob");
+
     private CartoonCharacter selectedCC = cc1;  // Selected one
+    private CartoonCharacter nonSelectedCC1 = cc2;
+    private CartoonCharacter nonSelectedCC2 = cc3;
 
     private double walkDist = 20;
     // methods
@@ -21,6 +24,8 @@ public class PuppetMaster {
      */
     public void doAlice() {
         this.selectedCC = this.cc2;
+        this.nonSelectedCC1 = this.cc1;
+        this.nonSelectedCC2 = this.cc3;
     }
 
     /**
@@ -28,6 +33,8 @@ public class PuppetMaster {
      */
     public void doCasey() {
         this.selectedCC = this.cc1;
+        this.nonSelectedCC1 = this.cc2;
+        this.nonSelectedCC2 = this.cc3;
     }
 
     /**
@@ -35,6 +42,8 @@ public class PuppetMaster {
      */
     public void doBob() {
         this.selectedCC = this.cc3;
+        this.nonSelectedCC1 = this.cc2;
+        this.nonSelectedCC2 = this.cc1;
     }
 
     /**
@@ -93,7 +102,19 @@ public class PuppetMaster {
      * Tell the cartoonCharacter to Walk
      */
     public void doWalk() {
-        this.selectedCC.walk(walkDist);
+        if (this.selectedCC.direction == "right") {
+            if (nonSelectedCC1.characterX >= this.selectedCC.characterX + 70.0 + walkDist) {
+                if (nonSelectedCC2.characterX >= this.selectedCC.characterX + 70.0 + walkDist) {
+                    this.selectedCC.walk(walkDist);
+                }
+            }
+        } else {
+            if (nonSelectedCC1.characterX <= this.selectedCC.characterX - walkDist) {
+                if (nonSelectedCC2.characterX <= this.selectedCC.characterX - walkDist) {
+                    this.selectedCC.walk(walkDist);
+                }
+            }
+        }
     }
 
     /**

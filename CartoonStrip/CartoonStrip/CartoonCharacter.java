@@ -25,9 +25,9 @@ public class CartoonCharacter {
 
     /* Fields representing the state of a CartoonCharacter */
     private String imagePrefix;
-    private double characterX = -100;   // top left corner of character     
+    public double characterX = -100;   // top left corner of character     
     private double characterY = -100;
-    private String direction = "right";
+    public String direction = "right";
     private String emotion = "smile";
 
     /* Fields containing dimensions of CartoonCharacters */

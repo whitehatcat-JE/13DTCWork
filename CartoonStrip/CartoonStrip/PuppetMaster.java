@@ -47,6 +47,31 @@ public class PuppetMaster {
     }
 
     /**
+     * Check which object has been clicked on and select it
+     */
+    public void doMouse(String action, double x, double y) {
+        if (action.equals("clicked")) {
+            // Check the location of the x and y against the loc of the obj
+            if ((x >= this.cc1.getLocX())
+             && (x <= this.cc1.getLocX()+this.cc1.getWidth())
+             && (y <= this.cc1.getLocY()+this.cc1.getHeight())
+             && (y >= this.cc1.getLocY())) {
+                 this.selectedCC = this.cc1;
+            } else if ((x >= this.cc2.getLocX())
+             && (x <= this.cc2.getLocX()+this.cc2.getWidth())
+             && (y <= this.cc2.getLocY()+this.cc2.getHeight())
+             && (y >= this.cc2.getLocY())) {
+                 this.selectedCC = this.cc2;
+             } else if ((x >= this.cc3.getLocX())
+             && (x <= this.cc3.getLocX()+this.cc3.getWidth())
+             && (y <= this.cc3.getLocY()+this.cc3.getHeight())
+             && (y >= this.cc3.getLocY())) {
+                 this.selectedCC = this.cc3;
+             }
+        }
+    }
+
+    /**
      * Tell the cartoonCharacter to smile
      */
     public void doSmile() {
@@ -103,17 +128,9 @@ public class PuppetMaster {
      */
     public void doWalk() {
         if (this.selectedCC.direction == "right") {
-            if (nonSelectedCC1.characterX >= this.selectedCC.characterX + 70.0 + walkDist) {
-                if (nonSelectedCC2.characterX >= this.selectedCC.characterX + 70.0 + walkDist) {
-                    this.selectedCC.walk(walkDist);
-                }
-            }
+            this.selectedCC.walk(walkDist);
         } else {
-            if (nonSelectedCC1.characterX <= this.selectedCC.characterX - walkDist) {
-                if (nonSelectedCC2.characterX <= this.selectedCC.characterX - walkDist) {
-                    this.selectedCC.walk(walkDist);
-                }
-            }
+            this.selectedCC.walk(walkDist);
         }
     }
 
@@ -137,6 +154,7 @@ public class PuppetMaster {
         // setup the buttons, slider, textField, to call methods on the object
         UI.initialise();
         UI.setWindowSize(CANVASWIDTH, CANVASHEIGHT);
+        UI.setMouseListener(pm::doMouse);
 
         // Buttons to switch selected character
         UI.addButton("Do Alice", pm::doAlice);

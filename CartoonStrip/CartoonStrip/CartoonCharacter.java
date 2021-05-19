@@ -25,7 +25,7 @@ public class CartoonCharacter {
 
     /* Fields representing the state of a CartoonCharacter */
     private String imagePrefix;
-    public double characterX = -100;   // top left corner of character     
+    private double characterX = -100;   // top left corner of character     
     private double characterY = -100;
     public String direction = "right";
     private String emotion = "smile";
@@ -50,6 +50,34 @@ public class CartoonCharacter {
         this.characterY = y;
         this.imagePrefix=name;
         this.draw();
+    }
+
+    /** 
+     * Get the X location of the character
+    */
+    public double getLocX() {
+        return this.characterX;
+    }
+
+    /**
+     * Get the Y location of the character
+    */
+    public double getLocY() {
+        return this.characterY;
+    }
+
+    /**
+     * Get the character width
+    */
+    public double getWidth() {
+        return this.characterWidth;
+    }
+
+    /**
+     * Get the character height
+    */
+    public double getHeight() {
+        return this.characterHeight;
     }
 
     /** 

@@ -5,6 +5,8 @@
  * @author Jayden  
  * @version 27/05/2021
  */
+import java.util.HashMap;
+import ecs100.*;
 public class Book {
     // fields
     private int id;
@@ -29,7 +31,7 @@ public class Book {
      * Constructor overloading
      */
     public Book(int ID, String nm, String auth, int qty) {
-        this(id, nm, author, qty, DEFAULT_IMAGE);
+        this(ID, nm, auth, qty, DEFAULT_IMAGE);
     }
 
     /**
@@ -44,7 +46,7 @@ public class Book {
      * Getter for name
      * @return  String name
      */
-    public int getName() {
+    public String getName() {
         return this.name;
     }
 
@@ -52,8 +54,8 @@ public class Book {
      * Getter for author
      * @return  String author
      */
-    public int getAuthor() {
-        return this.auth;
+    public String getAuthor() {
+        return this.author;
     }
 
     /**
@@ -61,7 +63,7 @@ public class Book {
      * @return  int quantity
      */
     public int getQuantity() {
-        return this.qty;
+        return this.quantity;
     }
 
     /**

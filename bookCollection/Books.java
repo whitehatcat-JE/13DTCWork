@@ -22,7 +22,7 @@ public class Books {
         booksMap = new HashMap<Integer, Book>(); // Initialise hashmap
 
         // Creating books
-        Book1 b1 = new Book(1, "Pet Semetary", "Stephen  King", 76);
+        Book b1 = new Book(1, "Pet Semetary", "Stephen  King", 76);
         Book b2 = new Book(2, "1984", "George Orwell", 66);
         Book b3 = new Book(3, "The subtle knife", "Phillip Pullman", 42);
         Book b4 = new Book(4, "The subtle art of not giving a F*ck", "George Washington", 99);
@@ -33,7 +33,7 @@ public class Books {
         booksMap.put(3, b3);
         booksMap.put(4, b4);
 
-        this.currBookId = 4;
+        this.currBookID = 4;
     }
 
     /**
@@ -49,12 +49,15 @@ public class Books {
 
         // Check boundaries for the number of books added to stock
         do {
-            quantity = UI.askInt("Quantity: ")
+            quantity = UI.askInt("Quantity: ");
         } while (0 > quantity || quantity > MAX_QUANTITY);
 
+        // Add a book image for display in the GUI
+        String imgFileName = UIFileChooser.open("Choose Image File: ");
+
         // Increment the book ID counter and add book to hashmap
-        currBookId++;
-        booksMap.put(currBookId, new Book(currBookId, name, author, quantity));
+        this.currBookID++;
+        booksMap.put(currBookID, new Book(currBookID, name, author, quantity, imgFileName));
     }
 
     /**
@@ -63,7 +66,8 @@ public class Books {
      */
     public void findBook() {
         int bookId = UI.askInt("Id: ");     // Finds book on ID - change to title
-        booksMap.get(bookId)
+        UI.println(booksMap.get(bookId).getName());
+        booksMap.get(bookId).displayBook();
     }
 
     /**

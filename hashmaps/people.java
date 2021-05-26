@@ -17,5 +17,4 @@ public class People {
         for (String name : peopleAges.keySet()) {
             System.out.println("Name: " + name + "\tAge: " + peopleAges.get(name));
         }
-    }
 }

@@ -12,15 +12,24 @@ public class Book {
     private String author;
     private int quantity;
     private String image;
+    static final String DEFAULT_IMAGE = "book.jpeg";
 
     /**
      * Constructor for objects of class Book
      */
-    public Book(int ID, String nm, String auth, int qty) {
+    public Book(int ID, String nm, String auth, int qty, String img) {
         this.id = ID;
         this.name = nm;
         this.author = auth;
         this.quantity = qty;
+        this.image = img;
+    }
+
+    /**
+     * Constructor overloading
+     */
+    public Book(int ID, String nm, String auth, int qty) {
+        this(id, nm, author, qty, DEFAULT_IMAGE);
     }
 
     /**
@@ -53,5 +62,17 @@ public class Book {
      */
     public int getQuantity() {
         return this.qty;
+    }
+
+    /**
+     * Display our image on our GUI
+     */
+    public void displayBook() {
+        double locX = 100.0;
+        double locY = 100.0;
+        final double WIDTH = 100.0;
+        final double HEIGHT = 100.0;
+
+        UI.drawImage(this.image, locX, locY, WIDTH, HEIGHT);
     }
 }

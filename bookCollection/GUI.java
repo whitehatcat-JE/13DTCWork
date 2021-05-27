@@ -14,7 +14,7 @@ public class GUI {
         UI.initialise();
         UI.addButton("All", bk::printAll);
         UI.addButton("Find", bk::findBook);
-        UI.addButton("Print", bk::printBook);
-        UI.addButton("Quit", bk::quit);
+        UI.addButton("Add", bk::addBook);
+        UI.addButton("Quit", UI::quit);
     }
 }

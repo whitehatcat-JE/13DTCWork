@@ -75,7 +75,7 @@ public class Books {
      */
     public void printAll() {
         for (int bookId : booksMap.keySet()) {
-            UI.println(bookId + "Details: ");
+            UI.println(bookId + " - Details: ");
             UI.println(booksMap.get(bookId).getName() + " "
                 + booksMap.get(bookId).getAuthor() + " "
                 + booksMap.get(bookId).getQuantity());

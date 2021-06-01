@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Flag
+comment1.params=x\ y
+comment1.target=void\ drawFlag(double,\ double)
+comment1.text=\r\n\ DrawFlag\ changes\ the\ coordinates\ of\ the\ flag\r\n\ @param\ x\ \ \ \ X\ position\ of\ new\ flag\r\n\ @param\ y\ \ \ \ Y\ position\ of\ new\ flag\r\n
+comment2.params=
+comment2.target=void\ sway()
+comment2.text=\r\n\ Adjusts\ the\ flag\ sway\ amt\ in\ the\ wind\r\n
+comment3.params=
+comment3.target=void\ updateFlag()
+comment3.text=\r\n\ Refreshes\ the\ flag\r\n
+comment4.params=
+comment4.target=void\ clearFlag()
+comment4.text=\r\n\ Clear\ clears\ the\ screen\ of\ the\ current\ flag\r\n\ @param\ x\ \ \ \ X\ position\ of\ flag\ to\ clear\r\n\ @param\ y\ \ \ \ Y\ position\ of\ flag\ to\ clear\r\n
+comment5.params=y
+comment5.target=void\ changeHeight(double)
+comment5.text=\r\n\ Adjusts\ the\ height\ of\ the\ flag\r\n\ @param\ y\ \ \ \ Amount\ to\ adjust\ flagY\ by\r\n
+numComments=6

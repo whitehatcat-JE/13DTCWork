@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=lollipop
+comment0.text=\r\n\ Will\ draw\ a\ GUI\ Lollipop\r\n\ @author\ Jayden\r\n\ @version\ 1/04/21\r\n
+comment1.params=
+comment1.target=lollipop()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ lollipop\r\n
+comment2.params=x\ y\ size\ stick
+comment2.target=void\ drawLollipop(double,\ double,\ double,\ double)
+comment2.text=\r\n\ Draw\ a\ red\ lollipop\ on\ a\ stick\r\n
+comment3.params=
+comment3.target=void\ doDrawLollipop()
+comment3.text=\r\n\ Draw\ a\ lollipop\ and\ ask\ the\ user\ for\ its\ size\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ Executes\ the\ lollipop\ script\r\n
+numComments=5

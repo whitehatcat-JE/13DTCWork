@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Door
+comment1.params=winner
+comment1.target=void\ isWinner(boolean)
+comment2.params=
+comment2.target=void\ open()
+comment3.params=x\ y
+comment3.target=void\ regen(int,\ int)
+numComments=4

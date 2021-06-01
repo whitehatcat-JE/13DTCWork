@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Stage
+comment1.params=
+comment1.target=void\ openDoorA()
+comment2.params=
+comment2.target=void\ openDoorB()
+comment3.params=
+comment3.target=void\ openDoorC()
+comment4.params=action\ x\ y
+comment4.target=void\ clickDoors(java.lang.String,\ double,\ double)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

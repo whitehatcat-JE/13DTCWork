@@ -1,0 +1,3 @@
+﻿  Task2.cpp
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task2\Task2\Task2.cpp(12,48): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Task2.vcxproj -> C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task2\Debug\Task2.exe

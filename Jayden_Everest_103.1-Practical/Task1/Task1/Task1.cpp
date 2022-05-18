@@ -19,10 +19,11 @@ enum class position {
 struct soccer {
     int number = 0;
     float speed = 0.0;
+    position type = position::goalkeeper;
 };
 
 // User input for a given player
-void getPlayerInfo(soccer* playerStats, position* playerPosition) {
+void getPlayerInfo(soccer* playerStats) {
     // Gets general player info
     cout << "New Player Number: ";
     cin >> (*playerStats).number;
@@ -36,23 +37,23 @@ void getPlayerInfo(soccer* playerStats, position* playerPosition) {
     cin >> inputtedPosition;
     switch (inputtedPosition) { // Converts user input into equivalent enumerator
     case 'g':
-        *playerPosition = position::goalkeeper;
+        (*playerStats).type = position::goalkeeper;
         cout << "Position stored as Goalkeeper." << endl;
         break;
     case 'm':
-        *playerPosition = position::midfielder;
+        (*playerStats).type = position::midfielder;
         cout << "Position stored as Midfielder." << endl;
         break;
     case 's':
-        *playerPosition = position::striker;
+        (*playerStats).type = position::striker;
         cout << "Position stored as Striker." << endl;
         break;
     case 'w':
-        *playerPosition = position::winger;
+        (*playerStats).type = position::winger;
         cout << "Position stored as Winger." << endl;
         break;
     case 'd':
-        *playerPosition = position::defender;
+        (*playerStats).type = position::defender;
         cout << "Position stored as Defender." << endl;
         break;
     default:
@@ -62,13 +63,13 @@ void getPlayerInfo(soccer* playerStats, position* playerPosition) {
 }
 
 // Prints a given players information
-void printPlayerInfo(soccer playerStats, position playerPosition) {
+void printPlayerInfo(soccer playerStats) {
     // Output for general player info
     cout << "Stored information for Player No." << playerStats.number << ":" << endl;
     cout << "Max Speed: " << playerStats.speed << "mph" << endl;
     // Output for player position
     cout << "Position: ";
-    switch (playerPosition) { // Converts enum into equivalent word
+    switch (playerStats.type) { // Converts enum into equivalent word
     case position::goalkeeper:
         cout << "Goalkeeper";
         break;
@@ -92,14 +93,12 @@ int main()
 {
     // Defines & Gets data for player A
     soccer playerAStats = soccer();
-    position playerAPosition = position::goalkeeper;
-    getPlayerInfo(&playerAStats, &playerAPosition);
+    getPlayerInfo(&playerAStats);
     // Defines & Gets data for player B
     soccer playerBStats = soccer();
-    position playerBPosition = position::goalkeeper;
-    getPlayerInfo(&playerBStats, &playerBPosition);
+    getPlayerInfo(&playerBStats);
 
     // Outputs the stored player data
-    printPlayerInfo(playerAStats, playerAPosition);
-    printPlayerInfo(playerBStats, playerBPosition);
+    printPlayerInfo(playerAStats);
+    printPlayerInfo(playerBStats);
 }

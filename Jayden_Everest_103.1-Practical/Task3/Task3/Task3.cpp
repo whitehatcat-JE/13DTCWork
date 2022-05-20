@@ -50,7 +50,7 @@ void printMatrix(float matrix[3][3], string name) {
 
 int main()
 {
-    // Matrix initializations
+    // Matrix declarations
     float matrixA[3][3], matrixB[3][3], matrixC[3][3];
     // Fills matrixA & matrixB with user inputted values
     cout << "Matrix A values: " << endl;

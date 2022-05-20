@@ -1,0 +1,7 @@
+﻿  Task6.cpp
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task6\Task6\Task6.cpp(95,48): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task6\Task6\Task6.cpp(97,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task6\Task6\Task6.cpp(98,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task6\Task6\Task6.cpp(99,53): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task6\Task6\Task6.cpp(100,48): warning C4305: 'argument': truncation from 'double' to 'float'
+  Task6.vcxproj -> C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task6\Debug\Task6.exe

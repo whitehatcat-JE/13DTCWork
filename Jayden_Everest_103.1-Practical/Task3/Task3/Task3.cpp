@@ -12,7 +12,7 @@ using std::string;
 void fillMatrix(float matrix[3][3]) {
     for (int row = 0; row < 3; row++) {
         for (int column = 0; column < 3; column++) {
-            cout << "Enter value for (" << column << ", " << row << "): ";
+            cout << "Enter value for (" << column + 1 << ", " << row + 1 << "): ";
             cin >> matrix[row][column];
         }
     }

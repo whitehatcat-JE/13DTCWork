@@ -69,6 +69,7 @@ bool play() {
     char selected;
     cout << "\nWhich shape is this?\na. Rectangle\nb. Triangle\nc. Square\nd. None of the above\n";
     cin >> selected;
+    if (selected < 97 || selected > 100) cout << "\nOption not recognized!";
     // Returns true if user is right, else false
     if ((char)(shape + 97) == selected) return true;
     return false;
@@ -83,10 +84,10 @@ void menu(int correctAnswers) {
     switch (selected) { // Runs selected option
     case 1: // Play Option
         if (play()) {
-            cout << "\nCorrect! +10 Points";
+            cout << "\nCorrect! +10 Points\n";
             menu(++correctAnswers);
         } else {
-            cout << "\nWrong answer";
+            cout << "\nWrong answer\n";
             menu(correctAnswers);
         }
         break;

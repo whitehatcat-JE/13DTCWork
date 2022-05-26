@@ -1,3 +1,3 @@
 ﻿  Task4.cpp
-C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task4\Task4\Task4.cpp(90,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task4\Task4\Task4.cpp(103,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Task4.vcxproj -> C:\Users\270168415\OneDrive - UP Education\Documents\13DTCWork\Jayden_Everest_103.1-Practical\Task4\Debug\Task4.exe
